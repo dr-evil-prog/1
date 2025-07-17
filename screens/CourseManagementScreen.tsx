@@ -187,7 +187,7 @@ const CourseManagementScreen: React.FC = () => {
     }
 
 
-    const renderSection = (title: string, children: React.ReactNode) => (
+    const renderSection = (children: React.ReactNode) => (
         <div className="bg-white p-6 rounded-lg shadow-md">{children}</div>
     );
     
@@ -200,7 +200,7 @@ const CourseManagementScreen: React.FC = () => {
              <h1 className="text-3xl font-bold text-gray-900 mb-6">{t('courseMgmt.title')}: {course.title}</h1>
 
             {/* Course Details Section */}
-            {renderSection('course-details', <>
+            {renderSection(<>
                 <div className="flex justify-between items-start">
                     <h2 className="text-2xl font-semibold text-gray-800 mb-4">{t('courseMgmt.editCourse')}</h2>
                     {!isEditingCourse && <button onClick={handleEditCourse} className="font-medium text-primary hover:text-primary-700">{t('courseMgmt.action.edit')}</button>}
@@ -234,7 +234,7 @@ const CourseManagementScreen: React.FC = () => {
             </>)}
 
             {/* Modules Section */}
-             {renderSection('modules', <>
+             {renderSection(<>
                  <div className="flex justify-between items-center mb-4">
                     <h2 className="text-2xl font-semibold text-gray-800">{t('courseMgmt.modulesTitle')}</h2>
                     <button onClick={() => setIsAddingModule(!isAddingModule)} className="px-4 py-2 bg-primary text-white rounded-md hover:bg-primary-600">
@@ -369,7 +369,7 @@ const CourseManagementScreen: React.FC = () => {
             </>)}
 
              {/* Exam Management Section */}
-            {exam && renderSection('exam', <>
+            {exam && renderSection(<>
                  <div className="flex justify-between items-start mb-4">
                     <h2 className="text-2xl font-semibold text-gray-800">{t('courseMgmt.examManagement')}</h2>
                      {!isEditingExam && <button onClick={() => setIsEditingExam(true)} className="font-medium text-primary hover:text-primary-700">{t('courseMgmt.action.edit')}</button>}
