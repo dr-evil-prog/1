@@ -1,0 +1,6 @@
+{
+  "name": "Marietime Training Wing",
+  "description": "A maritime training platform offering courses, materials, and exams, all managed through an admin-based user activation system. Users register and await admin approval to access content.",
+  "requestFramePermissions": [],
+  "prompt": ""
+}
